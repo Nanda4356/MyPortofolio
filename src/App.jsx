@@ -6,17 +6,8 @@ import Skill from "./components/Skill";
 
 
 import AuthProvider from "./context/AuthContext";
-import ProtectedRoute from "./routes/ProtectedRoute";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import Weather from "./pages/Weather";
 import FavProvider from "./context/FavContext";
 import More from "./components/More";
-
-
-import ProductDetail from "./pages/shop/ProductDetail";
-import ShopLayout from "./pages/shop/ShopLayout";
-import ShopList from "./pages/shop/ShopList";
 
 import { useEffect } from "react";
 import AOS from "aos";
@@ -39,23 +30,8 @@ export default function App() {
             <Route element={<DefaultLayout />}>
               <Route path="/" element={<Home />} />
               <Route path="/more" element={<More />} />
-              <Route path="/login" element={<Login />} />
               <Route path="/about" element={<About />} />
               <Route path="/skill" element={<Skill />} />
-              <Route path="/register" element={<Register />} />
-              <Route
-                path="/weather"
-                element={
-                  <ProtectedRoute>
-                    <Weather />
-                  </ProtectedRoute>
-                }
-              />
-
-              <Route path="/shop" element={<ShopLayout />}>
-                <Route index element={<ShopList />} />
-                <Route path=":id" element={<ProductDetail />} />
-              </Route>
             </Route>
           </Routes>
         </BrowserRouter>

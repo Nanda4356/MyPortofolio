@@ -6,10 +6,10 @@
 }
 
 @font-face{
-  font-family: Poppins;
-  src: url(../fonts/Poppins-Regular.ttf);
+  font-family: Inter;
+  src: url(../src/fonts/static/Inter-Regular.ttf);
 }
 
 @theme{
-  --font-Poppins : Poppins,"sans-serif";
+  --font-Inter : "Inter", sans-serif;
 }
